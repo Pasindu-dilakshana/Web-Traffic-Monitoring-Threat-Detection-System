@@ -1,0 +1,48 @@
+# ========================
+# Node.js
+# ========================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ========================
+# Environment Variables
+# ⚠️  CRITICAL - Never commit secrets!
+# ========================
+.env
+.env.local
+.env.development
+.env.production
+
+# ========================
+# Build Outputs
+# ========================
+dist/
+build/
+.vite/
+
+# ========================
+# Docker
+# ========================
+docker-compose.override.yml
+
+# ========================
+# Database
+# ========================
+pgdata/
+*.sql.bak
+
+# ========================
+# OS & Editor Files
+# ========================
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# ========================
+# Logs
+# ========================
+logs/
+*.log
