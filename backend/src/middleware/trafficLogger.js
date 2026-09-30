@@ -6,9 +6,8 @@ const trafficLogger = async (req, res, next) => {
     if (ip === '::1') ip = '127.0.0.1';
     
     try {
-        // ==========================================
+
         // 1. ACTIVE DEFENSE FIREWALL CHECK
-        // ==========================================
         const banCheck = await pool.query('SELECT * FROM blocked_ips WHERE ip_address = $1', [ip]);
         
         if (banCheck.rows.length > 0) {
@@ -22,9 +21,8 @@ const trafficLogger = async (req, res, next) => {
             });
         }
         
-        // ==========================================
+
         // 2. LOG NORMAL TRAFFIC
-        // ==========================================
         const method = req.method;
         const url = req.originalUrl;
         
